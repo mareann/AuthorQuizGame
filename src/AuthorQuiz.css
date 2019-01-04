@@ -1,0 +1,53 @@
+p {
+  font-size: .7rem;
+}
+
+#footer p {
+  margin-top: 1rem;
+  font-size: .3rem;
+}
+
+div.jumbotron {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  margin-bottom: .3rem;
+}
+
+.jumbotron h1 {
+  font-size: 1rem;
+}
+
+.turn > div {
+  height: 400px;
+}
+
+.turn {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.authorimage {
+  max-height: 100%;
+  /*width: 100%;*/
+}
+
+.answer {
+  background-color: #F0F7FD;
+  border-color: #D0E3F0;
+  margin-bottom: .3rem;
+  padding: .1rem .5rem .1rem .1rem;
+  border-left: 5px solid #D0E3F0;
+  cursor: pointer;
+}
+
+.answer:hover {
+  background-color: #D0E3F0;
+}
+
+.answer h4 {
+  font-size: .5rem;
+}
+
+.jumbotron p {
+  font-size: .5rem;
+}
