@@ -5,6 +5,7 @@ import * as Redux  from 'redux';
 import * as ReactRedux from 'react-redux';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
+import AddAuthorForm from './AddAuthorForm';
 import * as serviceWorker from './serviceWorker';
 import {shuffle,sample} from 'underscore';
 
@@ -86,12 +87,6 @@ function resetState()  {
    };
 }
 
-function AddAuthorForm({match}) {
-	return <div> 
-	  <h1>Add Author</h1>
-	  <p>{JSON.stringify(match)}</p>
-	</div>;
-}
 
 function App() {
   return <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />;
