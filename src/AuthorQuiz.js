@@ -8,7 +8,7 @@ import './bootstrap.min.css';
 function Hero() {
   return(
      <div className="row">
-       <div className="jumbotron col-10 offset-1">
+       <div className="jumbotron col-6 offset-3">
          <h1>Author Quiz</h1>
          <p>Select the book written by the author shown!</p>
        </div>
@@ -63,7 +63,7 @@ Turn.propTypes = {
      <div className="row continue">
             { show 
               ? <div className="col-11" >
-                  <input type="button" className="btn btn-primary btn-lg float-right" value="Continue"  onClick={onContinue} />
+                  <input type="button" className="btn btn-primary btn-sm float-right" value="Continue"  onClick={onContinue} />
               </div>
              : null
             }

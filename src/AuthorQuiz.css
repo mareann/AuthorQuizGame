@@ -7,18 +7,29 @@ p {
   font-size: .3rem;
 }
 
+.authorimage {
+  width: 50%;
+  height: 50%;
+}
+
 div.jumbotron {
   padding-top: .3rem;
   padding-bottom: .3rem;
   margin-bottom: .3rem;
+  background-color: lightblue;
 }
 
 .jumbotron h1 {
   font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.jumbotron p {
+  margin-bottom: .3rem;
 }
 
 .turn > div {
-  height: 400px;
+  height: 70%;
 }
 
 .turn {
@@ -33,15 +44,15 @@ div.jumbotron {
 
 .answer {
   background-color: #F0F7FD;
-  border-color: #D0E3F0;
+  border-color: lightblue; /*#D0E3F0;*/
   margin-bottom: .3rem;
   padding: .1rem .5rem .1rem .1rem;
-  border-left: 5px solid #D0E3F0;
+  border-left: 5px solid lightblue; /*#D0E3F0;*/
   cursor: pointer;
 }
 
 .answer:hover {
-  background-color: #D0E3F0;
+  background-color: lightblue; /*#D0E3F0;*/
 }
 
 .answer h4 {
