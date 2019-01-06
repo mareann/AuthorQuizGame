@@ -86,15 +86,15 @@ function resetState()  {
    };
 }
 
-function AddAuthorForm(match) {
-	return <div>
+function AddAuthorForm({match}) {
+	return <div> 
 	  <h1>Add Author</h1>
 	  <p>{JSON.stringify(match)}</p>
 	</div>;
 }
 
 function App() {
-  return <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />
+  return <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />;
 }
 
 function render() {   
