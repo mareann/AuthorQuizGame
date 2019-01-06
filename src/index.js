@@ -20,27 +20,27 @@ const authors = [
 	},
 	{
 		name: 'Joseph Conrad',
-		imageUrl: 'images/authors/marktwain.jpg',
+		imageUrl: 'images/authors/josephconrad.png',
 		imageSource: 'Wikimedia Commons',
 		books: ['Heart of Darkness']		
 	},
 	{
 		name: 'J.K. Rowling',
-		imageUrl: 'images/authors/marktwain.jpg',
+		imageUrl: 'images/authors/jkrowling.jpg',
 		imageSource: 'Wikimedia Commons',
 		books: ['Harry Potter',
 		        'Harry Potter returns']		
 	}, 
 	{
 		name: 'Stephen King',
-	    imageUrl: 'images/authors/marktwain.jpg',
+	    imageUrl: 'images/authors/stephenking.jpg',
 		imageSource: 'Wikimedia Commons',
 		books: ['The Shining',
 		        'IT']
 	},
 	{
 		name: 'Charles Dickens',
-		imageUrl: 'images/authors/marktwain.jpg',
+		imageUrl: 'images/authors/charlesdickens.jpg',
 		imageSource: 'Wikimedia Commons',
 		books: ['David Copperfield',
 		        'A Tales of Two Cities']
