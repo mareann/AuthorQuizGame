@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 //import logo from './logo.svg';
 import PropTypes from 'prop-types';
 import './AuthorQuiz.css';
@@ -13,11 +14,6 @@ function Hero() {
        </div>
      </div>
     );
-}
-
-function handleClick(title)  {
-
-  console.log("click ");
 }
 
 function Book({title, onClick}) {
@@ -58,12 +54,21 @@ Turn.propTypes = {
     books: PropTypes.arrayOf(PropTypes.string).isRequired
   }),
   books: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onAnswerSelected:  PropTypes.func, // PropTypes.func.isRequired,
+  onAnswerSelected:  PropTypes.func,
   highlight: PropTypes.string.isRequired
 };
 
 function Continue() {
   return (<div/>);
+     // <div className="row continue">
+     //        { show 
+     //          ? <div className="col-11" >
+     //              <input type="button" className="btn btn-primary btn-lg float-right" value="Continue"  onClick={onContinue} />
+     //          </div>
+     //         : null
+     //        }
+     // </div>
+   //);
 }
 
 function Footer() {
@@ -87,6 +92,7 @@ function AuthorQuiz({turnData, highlight, onAnswerSelected})  {
         <Hero />
         <Turn {...turnData} highlight={highlight} onAnswerSelected={onAnswerSelected} />
         <Continue />
+        <p><Link to="add">Add author</Link></p>
         <Footer />
      </div>
     );

@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+import * as Redux  from 'redux';
+import * as ReactRedux from 'react-redux';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
 import * as serviceWorker from './serviceWorker';
@@ -11,7 +14,7 @@ const authors = [
 		imageUrl: 'images/authors/marktwain.jpg',
 		imageSource: 'Wikimedia Commons',
 		books: ['The Adventures of Huckleberry Finn',
-		         'Life on Missisippi',
+		        'Life on Missisippi',
 		        'Roughing It']
 	},
 	{
@@ -24,28 +27,40 @@ const authors = [
 		name: 'J.K. Rowling',
 		imageUrl: 'images/authors/marktwain.jpg',
 		imageSource: 'Wikimedia Commons',
-		books: 'Harry Potter'		
+		books: ['Harry Potter',
+		        'Harry Potter returns']		
 	}, 
 	{
 		name: 'Stephen King',
 	    imageUrl: 'images/authors/marktwain.jpg',
 		imageSource: 'Wikimedia Commons',
-		books: ['The Shining','IT']
+		books: ['The Shining',
+		        'IT']
 	},
 	{
 		name: 'Charles Dickens',
 		imageUrl: 'images/authors/marktwain.jpg',
 		imageSource: 'Wikimedia Commons',
-		books: ['David Copperfield','A Tales of Two Cities']
+		books: ['David Copperfield',
+		        'A Tales of Two Cities']
 	},
 	{
 		name: 'William Shakespeare',
 		imageUrl: 'images/authors/shakespeare.jpg',
 		imageSource: 'Wikimedia Commons',
-		books: ['Hamlet','Macbeth','Romeo and Juliet']
+		books: ['Hamlet',
+		        'Macbeth',
+		        'Romeo and Juliet']
 	}
 
 ];
+
+function reducer(state, action){
+	return state;
+}
+
+let store = Redux.createStore(reducer);
+let state = resetState();
 
 function getTurnData(authors) {
    const allBooks = authors.reduce(function(p,c,i) {
@@ -64,13 +79,33 @@ function getTurnData(authors) {
    }
 }
 
-const state = {
+function resetState()  {
+  return {
 	turnData: getTurnData(authors),
 	highlight: ''
-};
+   };
+}
+
+function AddAuthorForm(match) {
+	return <div>
+	  <h1>Add Author</h1>
+	  <p>{JSON.stringify(match)}</p>
+	</div>;
+}
+
+function App() {
+  return <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />
+}
 
 function render() {   
-    ReactDOM.render(<AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />, document.getElementById('root'));
+    ReactDOM.render(
+    	<BrowserRouter>
+    	  <React.Fragment>
+    	    <Route exact path="/" component={App} />
+    	    <Route path="/add" component={AddAuthorForm} />
+          </React.Fragment>
+        </BrowserRouter>,
+    	document.getElementById('root'));
 }
 
 function onAnswerSelected(answer) {
